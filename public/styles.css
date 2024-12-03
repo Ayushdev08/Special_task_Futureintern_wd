@@ -1,0 +1,292 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background-image: url('https://i.redd.it/pevzty3gdrub1.png'); /* Replace with your background image URL */
+    background-size: cover; /* Ensures the background image covers the entire screen */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed on scroll */
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 20px; /* Adjusted padding for better space */
+  }
+  
+  /* Glassmorphism effect for the forms */
+  .auth-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+    backdrop-filter: blur(10px); /* Creates the frosted glass effect */
+    border-radius: 15px;
+    padding: 40px; /* Increased padding for a more spacious look */
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for definition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .auth-container p{
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+    transition: text-shadow 0.3s ease;
+    margin-top: 20px;
+  }
+  .auth-container a{
+    color: #19b008;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    transition: text-decoration 0.3s ease;
+  }
+
+  .auth-container a:hover{
+    background-color: #2980b9;
+    transform: translateY(-3px);
+  }
+
+  .auth-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Heading Style */
+  h2 {
+    font-size: 2rem; /* Slightly larger font for better readability */
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap between form fields */
+  }
+  
+  label {
+    font-size: 1.1rem; /* Slightly larger text for better readability */
+    color: #fff;
+    text-align: left;
+    margin-bottom: 8px; /* Spacing between label and input */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="url"],
+  select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+    font-size: 1rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+    color: #fff; /* Text color inside input fields */
+    transition: all 0.3s ease;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.5);
+    outline: none;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+  }
+  
+  button:active {
+    transform: translateY(2px);
+  }
+  
+  /* Profile Page */
+  .profile-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+    backdrop-filter: blur(10px); /* Creates the frosted glass effect */
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for definition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-card {
+    margin-top: 20px;
+  }
+  
+  .profile-card p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .profile-photo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    padding: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-photo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For Tablets (Landscape) */
+  @media (max-width: 1024px) {
+    body {
+      background-position: center center; /* Center background image for landscape view */
+    }
+  
+    .auth-container {
+      padding: 25px;
+      max-width: 80%;
+    }
+  
+    h2 {
+      font-size: 1.7rem;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="url"],
+    select {
+      font-size: 1.1rem;
+      padding: 10px;
+    }
+  
+    button {
+      padding: 12px;
+    }
+  }
+  
+  /* For Tablets (Portrait) */
+  @media (max-width: 768px) {
+    body {
+      background-size: auto 100%; /* Ensures the background scales well for portrait tablets */
+    }
+  
+    .auth-container {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="url"],
+    select {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    button {
+      padding: 12px;
+    }
+  }
+  
+  /* For Mobile Phones */
+  @media (max-width: 480px) {
+    body {
+      background-size: cover; /* Keeps the image properly scaled for mobile devices */
+      background-position: center center; /* Ensure the background image stays centered */
+    }
+  
+    .auth-container {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="url"],
+    select {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    button {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  
+    .profile-card {
+      margin-top: 15px;
+    }
+  
+    .profile-photo {
+      max-width: 100px;
+    }
+  }
+  
+  /* Additional Styles for Profile Page */
+  .profile-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px;
+  }
+  
+  .profile-container h2 {
+    color: #fff;
+  }
+  
+  .profile-container p {
+    color: #fff;
+  }
+  
+  .profile-photo {
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  

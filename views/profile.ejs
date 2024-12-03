@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="profile-container">
+    <h2>Welcome, <%= student.Name %>!</h2>
+    <div class="profile-card">
+      <p><strong>Email:</strong> <%= student.Email %></p>
+      <p><strong>Major:</strong> <%= student.Major %></p>
+      <p><strong>Age:</strong> <%= student.Age %></p>
+      <p><strong>Gender:</strong> <%= student.Gender %></p>
+      <img src="<%= student.PhotoUrl %>" alt="Profile Picture" class="profile-photo">
+    </div>
+  </div>
+</body>
+</html>
